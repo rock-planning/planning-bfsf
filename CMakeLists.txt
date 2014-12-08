@@ -39,7 +39,7 @@ rock_executable(at_bfs_f
 )
 target_link_libraries(at_bfs_f ${Boost_LIBRARIES})
 
-install(FILES at_bfs_f
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/at_bfs_f
     PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE
     WORLD_READ WORLD_EXECUTE
     DESTINATION bin

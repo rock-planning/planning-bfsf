@@ -1,0 +1,14 @@
+#!/bin/bash
+#source /opt/centos/devtoolset-1.1/x86_64/enable
+module load libs/gcc-4.7.2/x86_64
+cd external/libff
+make clean
+make depend
+make
+cd ../..
+cd planners/at_bfs_f-ff
+scons -c
+scons ipc14_build=1
+cd ../..
+echo "Copying at_bfs_f..."
+cp planners/at_bfs_f-ff/at_bfs_f .

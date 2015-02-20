@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.6)
 find_package(Rock)
 rock_init(bfsf 0.1)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+rock_activate_cxx11()
 
 include_directories(include)
 include_directories(interfaces/ff-wrapped)

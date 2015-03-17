@@ -99,7 +99,7 @@ static char * serrmsg[] = {
 };
 
 
-/* void fcterr( int errno, char *par ); */
+void fcterr( int err, char *par ); 
 
 
 static int sact_err;
@@ -874,7 +874,7 @@ NAME  name_star
 
 
 #include "lex.fct_pddl.c"
-
+;
 
 /**********************************************************************
  * Functions
@@ -884,9 +884,9 @@ NAME  name_star
 /* 
  * call	bison -pfct -bscan-fct scan-fct.y
  */
-void fcterr( int errno, char *par ) {
+void fcterr( int err, char *par ) {
 
-/*   sact_err = errno; */
+/*   sact_err = err; */
 
 /*   if ( sact_err_par ) { */
 /*     free( sact_err_par ); */

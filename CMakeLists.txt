@@ -1,9 +1,13 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.10)
 
+project(bfsf
+        VERSION 0.1
+        DESCRIPTION "bfsf planner")
 find_package(Rock)
-rock_init(bfsf 0.1)
+rock_init()
 
 rock_activate_cxx11()
+set(CMAKE_CXX_FLAGS -fpic)
 
 include_directories(include)
 include_directories(interfaces/ff-wrapped)
@@ -11,8 +15,8 @@ include_directories(interfaces/agnostic)
 include_directories(external)
 
 add_subdirectory(external/libff)
-
 include_directories(planners/at_bfs_f-ff/src)
+
 find_package(Boost COMPONENTS program_options)
 rock_executable(at_bfs_f
     SOURCES

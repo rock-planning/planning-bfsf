@@ -407,4 +407,4 @@ namespace FF
 
 #endif
 
-#endif //libff.h
+#endif // libff.h
